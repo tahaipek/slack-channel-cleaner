@@ -8,7 +8,7 @@ Cleaner is tested for **Node** and written with **Typescript**.
 
 You can get a SLACK_TOKEN for testing [here](https://api.slack.com/web). 
 
-Install with **npm**:
+Install with **npm**: [https://www.npmjs.com/package/slack-channel-cleaner](https://www.npmjs.com/package/slack-channel-cleaner)
 
     $ npm install -g slack-channel-cleaner
     $ slack-channel-cleaner
