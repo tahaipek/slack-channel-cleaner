@@ -1,0 +1,34 @@
+{
+  "name": "slack-channel-cleaner",
+  "version": "1.0.0",
+  "description": "Delete channel messages from slack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc index.ts && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tahaipek/slack-channel-cleaner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tahaipek/slack-channel-cleaner/issues"
+  },
+  "homepage": "https://github.com/tahaipek/slack-channel-cleaner#readme",
+  "keywords": [
+    "slack",
+    "history",
+    "delete",
+    "channel"
+  ],
+  "author": "Taha İPEK",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "colors": "^1.1.2",
+    "inquirer": "^1.2.1",
+    "linqts": "^1.6.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {}
+}
