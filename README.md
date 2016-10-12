@@ -1,7 +1,8 @@
 # **Slack Channel Cleaner** 💨
-Delete channel messages from slack for free plan(😪). 
+Delete channel messages from slack for free plan😪. 
 
-### **Usage** ✨🚀
+------------------------
+## **Usage** ✨🚀
 Cleaner is tested for **Node** and written with **Typescript**.
 
 You can get a SLACK_TOKEN for testing [here](https://api.slack.com/web). 
