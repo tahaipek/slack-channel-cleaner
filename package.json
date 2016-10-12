@@ -1,11 +1,14 @@
 {
   "name": "slack-channel-cleaner",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Delete channel messages from slack.",
   "main": "index.js",
+  "bin": {
+    "slack-channel-cleaner": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc index.ts && node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 /// <reference path="./typings/index.d.ts" />
 
 var request = require("request");
 var inquirer = require("inquirer");
 var Async = require("async");
-import { List } from './node_modules/linqts/linq';
+import { List } from 'linqts';
 
 var colors = require('colors');
 colors.setTheme({

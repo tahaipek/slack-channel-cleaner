@@ -1,9 +1,9 @@
-/// <reference path="./typings/index.d.ts" />
+#!/usr/bin/env node
 "use strict";
 var request = require("request");
 var inquirer = require("inquirer");
 var Async = require("async");
-var linq_1 = require('./node_modules/linqts/linq');
+var linqts_1 = require('linqts');
 var colors = require('colors');
 colors.setTheme({
     input: 'grey',
@@ -45,10 +45,10 @@ Async.auto({
                     return err || new Error("Error: " + resp.statusCode);
                 if (reqData.ok || reqData.ok == "true") {
                     var channels = reqData.channels;
-                    var channelPrompt = new linq_1.List(channels).Select(function (p) { return ({ name: p.name, id: p.id }); });
+                    var channelPrompt = new linqts_1.List(channels).Select(function (p) { return ({ name: p.name, id: p.id }); });
                     inquirer.prompt([{ message: colors.prompt("Delete selected channel records: "), type: "checkbox", name: "list", choices: channelPrompt.ToArray() }]).then(function (s) {
                         console.log(colors.info('Starting......................'));
-                        var channelIdList = new linq_1.List();
+                        var channelIdList = new linqts_1.List();
                         s.list.forEach(function (element) {
                             var channel = channelPrompt.First(function (k) { return k.name == element; });
                             channelIdList.Add(channel.id);
@@ -72,7 +72,7 @@ function getHistoryMessage(data, index) {
             return err || new Error("Error: " + resp.statusCode);
         if (reqData.ok || reqData.ok == "true") {
             var messages = reqData.messages;
-            var messageList = new linq_1.List(messages);
+            var messageList = new linqts_1.List(messages);
             console.log(colors.debug(" >> Fetching the channel history. ID: " + e + " / Count: " + messageList.Count() + " " + (messageList.Count() == 0 ? "- " + colors.error("Data not available") : "")));
             messageList.ToArray().forEach(function (k) {
                 _messageList.push({ channelId: e, message: k });
